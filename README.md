@@ -11,6 +11,8 @@
 
 - [ ] Edit & Delete existing files
 
+- [ ] Mobile responsive
+
 ## How to run it
 Run ```npm install``` to install the necessary packages
 
