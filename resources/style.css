@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #15161A;
+}
+
+header {
+  height: 5rem;
+  width: 100%;
+  background-color: #2C2D30;
+  display: flex;
+}
+
+.nav {
+  cursor: pointer;
+  height: 100%;
+  width: 80px;
+  min-width: 60px;
+  background-color: #35383F;
+  display: grid;
+  place-items: center;
+}
+
+.nav svg {
+  color: white;
+  height: 50px;
+  width: 50px;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 0 1rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.docName {
+  color: white;
+  display: flex;
+  place-items: center;
+  margin-left: 1.5rem;
+}
+
+.docName svg {
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.fileNameContainer p {
+  opacity: .7;
+  margin-left: 1.5rem;
+  line-height: 1.5rem;
+}
+
+#fileName {
+  margin-left: 1.5rem;
+  background-color: #2C2D30;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.docOptions {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.docOptions svg {
+  cursor: pointer;
+  color: white;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+#saveBtn {
+  cursor: pointer;
+  display: flex;
+  place-items: center;
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #cd6133;
+  color: white;
+}
+
+#saveBtn svg {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+
+
+#container {
+  display: flex;
+}
+
+.title {
+  width: 100%;
+  height: 40px;
+  background-color: #1E1F22;
+  display: flex;
+  align-items: center;
+}
+
+.title p {
+  margin-left: 2rem;
+  font-size: .8em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+
+
+#inputContainer {
+  width: 50vw;
+  height: auto;
+}
+
+#outputContainer {
+  width: 50vw;
+}
+
+#inputMD {
+  background-color: #15161A;
+  font-size: 1.3em;
+  overflow: hidden;
+  color: white;
+  resize: none;
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 90%;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+#outputMD {
+  font-family: 'Noto Serif', serif;
+  color: white;
+  min-height: 500px;
+  margin-right: 0rem;
+  padding: 2rem;
+}
+
+#outputMD> :first-of-type {
+  margin-top: 0;
+}
+
+#outputMD a {
+  color: white;
+  text-decoration: underline;
+}
+
+#outputMD ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+#outputMD ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+#outputMD li {
+  margin-left: 1.2rem;
+}
+
+ul li::marker {
+  color: #cd6133;
+}
+
+#outputMD ul li {
+  margin-bottom: 1rem;
+}
+
+
+#outputMD ul li a {
+  margin-bottom: 1rem;
+}
+
+#outputMD h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h6 {
+  color: #cd6133;
+}
+
+#outputMD p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  margin-right: 2rem;
+}
+
+#outputMD hr {
+  margin: 1.5rem;
+}
+
+#outputMD pre {
+  margin-bottom: 2rem;
+  background-color: #2C2D30;
+  padding: 1.5rem;
+  white-space: pre-wrap;
+  border-radius: 5px;
+  line-height: 1.5rem;
+}
+
+#outputMD code {
+  word-wrap: break-word;
+  background-color: #2C2D30;
+}
+
+#outputMD blockquote {
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #2C2D30;
+  white-space: pre-wrap;
+  border-radius: 5px;
+  border-left: 5px solid #cd6133;
+}
+
+#outputMD blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
