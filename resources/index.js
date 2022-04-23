@@ -1,3 +1,17 @@
+a = JSON.parse(localStorage.getItem('files')) || [];
+if (a.length == 0) {
+  fetch('/resources/infos.md')
+    .then(res => res.text())
+    .then(data => {
+      a.push({ "fileName": "README.md", "fileContent": data });
+      localStorage.setItem('files', JSON.stringify(a));
+      inputMD.value = data
+      update()
+      getFiles()
+    })
+}
+
+
 let converter = new showdown.Converter()
 let inputMD = document.querySelector('#inputMD')
 
@@ -11,12 +25,12 @@ update()
 
 
 
-// Funzioni tasti //
+// Buttons fn //
 let fileName = document.querySelector('#fileName')
 let saveBtn = document.querySelector('#saveBtn')
-let deleteBtn = document.querySelector('#deleteBtn')
-saveBtn.addEventListener("click", download)
-deleteBtn.addEventListener("click", deleteFile)
+let clearBtn = document.querySelector('#deleteBtn')
+
+clearBtn.addEventListener("click", clearFile)
 
 
 function download() {
@@ -32,7 +46,25 @@ function download() {
   document.body.removeChild(element);
 }
 
-function deleteFile() {
+function clearFile() {
   inputMD.value = ''
   update()
+}
+
+
+// Files
+let filesContainer = document.querySelector('.filesContainer')
+let showFilesCheckbox = document.querySelector('#showFilesCheckbox')
+let nav = document.querySelector('.nav')
+showFilesCheckbox.addEventListener("click", showFiles)
+
+function showFiles() {
+  if (showFilesCheckbox.checked) {
+    filesContainer.style.height = "250px"
+    nav.style.backgroundImage = "url('./resources/close.svg')"
+  } else {
+    filesContainer.style.height = "0";
+    nav.style.backgroundImage = "url('./resources/hamb.svg')"
+  }
+
 }

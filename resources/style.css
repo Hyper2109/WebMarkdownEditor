@@ -11,6 +11,18 @@ body {
   background-color: #15161A;
 }
 
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #CD6133;
+  border-radius: 20px;
+  border: none;
+}
+
+
+
 header {
   height: 5rem;
   width: 100%;
@@ -19,13 +31,23 @@ header {
 }
 
 .nav {
+  background-image: url("./hamb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
   cursor: pointer;
   height: 100%;
   width: 80px;
   min-width: 60px;
   background-color: #35383F;
-  display: grid;
-  place-items: center;
+}
+
+#showFilesCheckbox {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .nav svg {
@@ -101,6 +123,89 @@ header {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+
+
+.filesContainer {
+  border-top: 1px solid white;
+  background-color: #2C2D30;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 0;
+  transition: .5s ease all;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.file {
+  margin: 1rem;
+  word-wrap: break-word;
+  text-align: center;
+  min-width: 200px;
+  max-width: 200px;
+  height: 80%;
+  background-color: #35383F;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: .2s all ease;
+}
+
+.file:hover {
+  transform: scale(1.1);
+}
+
+.file p {
+  padding: 1.5rem;
+  font-size: 1.2em;
+  overflow: auto;
+}
+
+.fileOptions {
+  min-height: 50px;
+  width: 100%;
+  background-color: #2C2D30;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.fileOptions div {
+  cursor: pointer;
+  height: 100%;
+  width: 50%;
+}
+
+.downloadFileBtn {
+  background-color: rgb(0, 170, 255);
+  background-image: url("./downloadBtn.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+}
+
+.deleteFileBtn {
+  background-color: rgb(255, 0, 0);
+  margin-left: auto;
+  background-image: url("./deleteFileBtn.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+}
+
+.downloadFileBtn:hover {
+  background-color: rgb(0, 89, 134);
+}
+
+.deleteFileBtn:hover {
+  background-color: rgb(80, 0, 0);
+  margin-left: auto;
+}
+
 
 
 
@@ -250,4 +355,64 @@ h6 {
 #outputMD blockquote p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 740px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .pageTitle {
+    display: none;
+  }
+
+  #inputMD {
+    height: 35vh;
+    margin-right: 5px;
+    overflow-y: auto;
+  }
+
+  .docName {
+    margin-left: 1rem;
+    min-width: 50px;
+  }
+
+  .fileNameContainer p {
+    margin-left: 0;
+  }
+
+  #fileName {
+    margin-left: 0;
+  }
+
+  #saveBtn p {
+    display: none;
+  }
+
+  #saveBtn {
+    width: 50px;
+  }
+
+  #container {
+    flex-direction: column;
+  }
+
+  #inputContainer {
+    width: 100vw;
+  }
+
+  #outputContainer {
+    width: 100%;
+  }
+
 }

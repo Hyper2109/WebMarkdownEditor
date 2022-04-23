@@ -6,20 +6,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Hyper Markdown</title>
 </head>
 
 <body>
 
   <header>
     <div class="nav">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
+      <input type="checkbox" id="showFilesCheckbox">
     </div>
     <div class="pageTitle">Hyper Markdown</div>
     <hr>
@@ -57,23 +51,18 @@
     </div>
   </header>
 
+
+  <div class="filesContainer">
+
+  </div>
+
+
   <div id="container">
     <div id="inputContainer">
       <div class="title">
         <p>Markdown</p>
       </div>
-      <textarea id="inputMD" placeholder="Type here!">
-# In browser markdown editor
-
-#### App Infos:
-- You can edit the name file by clicking on the filename under "Document Name"
-- You can save your changes by clicking the "Save changes" button
-- You can delete the entire text area by pressing on the bin icon
-
-#### Additional infos:
-- Author: [Hyper2109](https://github.com/Hyper2109)
-- Made with: HTML, CSS, JavaScript & [Showdown](https://github.com/showdownjs/showdown)
-      </textarea>
+      <textarea id="inputMD" placeholder="Type here!"></textarea>
     </div>
     <hr>
     <dir id="outputContainer">
@@ -89,6 +78,7 @@
 
   <script src="./node_modules/showdown/dist/showdown.min.js"></script>
   <script src="./resources/index.js"></script>
+  <script src="./resources/fileScript.js"></script>
 </body>
 
 </html>
