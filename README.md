@@ -7,11 +7,11 @@
 
 - [X] Save file
 
-- [ ] Menu with all saved files
+- [X] Menu with all saved files
 
-- [ ] Edit & Delete existing files
+- [X] Edit & Delete existing files
 
-- [ ] Mobile responsive
+- [X] Mobile responsive
 
 ## How to run it
 Run ```npm install``` to install the necessary packages
