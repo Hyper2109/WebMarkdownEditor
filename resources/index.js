@@ -1,6 +1,6 @@
 a = JSON.parse(localStorage.getItem('files')) || [];
 if (a.length == 0) {
-  fetch('/resources/infos.md')
+  fetch('https://raw.githubusercontent.com/Hyper2109/WebMarkdownEditor/master/resources/infos.md')
     .then(res => res.text())
     .then(data => {
       a.push({ "fileName": "README.md", "fileContent": data });
